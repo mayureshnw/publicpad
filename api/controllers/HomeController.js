@@ -6,6 +6,7 @@
  */
 
 module.exports = {
-	
+	getAllNotebooks: function(req, res){
+		res.send("this works");
+	}
 };
-

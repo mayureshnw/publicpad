@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,12 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  'GET /:note': {
+    controller: 'NotebookController',
+    skipAssets: true,
+    action: 'getNote'
+  },
+
+  'POST /Notebook/updateNote':'NotebookController.updateNote',
 
 };

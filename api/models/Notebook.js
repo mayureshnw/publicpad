@@ -8,7 +8,12 @@
 module.exports = {
 
   attributes: {
-
+    notename: {
+      type: 'string'
+    },
+    notedata: {
+        type: 'text',
+        defaultsTo: ''
+    }
   }
 };
-
