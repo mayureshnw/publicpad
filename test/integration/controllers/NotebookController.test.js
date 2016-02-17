@@ -16,7 +16,7 @@ describe('NotebookController', function() {
       request(sails.hooks.http.app)
         .get('/Notebook/createNote?name=12345')
         .expect(200)
-        .expect('125',done)
+        .expect('12345',done)
     })
 
   }),
