@@ -7,6 +7,13 @@
 
 module.exports = {
 
+	createNote: function(req, res){
+		var name = req.param("name");
+		Notebook.create({notename:name ,notedata:'Hello there'}).then(result=>{
+			return res.send(name);
+		});
+	},
+
 	getNote: function(req, res){
 		var name = req.param("note");
 		Notebook.find({notename: name}).then(note => {
@@ -35,13 +42,6 @@ module.exports = {
 		  }
 		  console.log('Updated user to have name ' + updated[0].notedata);
 			res.send("done");
-		});
-	},
-
-	createNote: function(req, res){
-		var name = req.param("name");
-		Notebook.create({notename:name ,notedata:'Hello there'}).then(result=>{
-			return res.send(result);
 		});
 	},
 
